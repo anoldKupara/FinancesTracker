@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinancesTracker.DbContexts
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext :  IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -13,6 +13,6 @@ namespace FinancesTracker.DbContexts
         public DbSet<Balance> Balances { get; set; }
         public DbSet<Income> Incomes { get; set; }
         public DbSet<Expense> Expenses { get; set; }
-        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }    
     }
 }
