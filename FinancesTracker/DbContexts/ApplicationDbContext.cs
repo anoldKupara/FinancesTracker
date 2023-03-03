@@ -13,5 +13,6 @@ namespace FinancesTracker.DbContexts
         public DbSet<Balance> Balances { get; set; }
         public DbSet<Income> Incomes { get; set; }
         public DbSet<Expense> Expenses { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
     }
 }
